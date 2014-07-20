@@ -21,6 +21,8 @@
 		07205F161971FE500040FAE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07205EF81971FE500040FAE6 /* UIKit.framework */; };
 		07205F1E1971FE500040FAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07205F1C1971FE500040FAE6 /* InfoPlist.strings */; };
 		07205F201971FE500040FAE6 /* gifKeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07205F1F1971FE500040FAE6 /* gifKeyTests.m */; };
+		0727A8411976055900E67F3A /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0727A8401976055900E67F3A /* UIImage+animatedGIF.m */; };
+		0727A843197606BB00E67F3A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0727A842197606BB00E67F3A /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		07205F1B1971FE500040FAE6 /* gifKeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gifKeyTests-Info.plist"; sourceTree = "<group>"; };
 		07205F1D1971FE500040FAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07205F1F1971FE500040FAE6 /* gifKeyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gifKeyTests.m; sourceTree = "<group>"; };
+		0727A83F1976055900E67F3A /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		0727A8401976055900E67F3A /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		0727A842197606BB00E67F3A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0727A843197606BB00E67F3A /* ImageIO.framework in Frameworks */,
 				07205EF71971FE500040FAE6 /* CoreGraphics.framework in Frameworks */,
 				07205EF91971FE500040FAE6 /* UIKit.framework in Frameworks */,
 				07205EF51971FE500040FAE6 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		07205EF31971FE500040FAE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0727A842197606BB00E67F3A /* ImageIO.framework */,
 				07205EF41971FE500040FAE6 /* Foundation.framework */,
 				07205EF61971FE500040FAE6 /* CoreGraphics.framework */,
 				07205EF81971FE500040FAE6 /* UIKit.framework */,
@@ -117,6 +124,8 @@
 				07205F061971FE500040FAE6 /* Main.storyboard */,
 				07205F091971FE500040FAE6 /* gifKeyViewController.h */,
 				07205F0A1971FE500040FAE6 /* gifKeyViewController.m */,
+				0727A83F1976055900E67F3A /* UIImage+animatedGIF.h */,
+				0727A8401976055900E67F3A /* UIImage+animatedGIF.m */,
 				07205F0C1971FE500040FAE6 /* Images.xcassets */,
 				07205EFB1971FE500040FAE6 /* Supporting Files */,
 			);
@@ -200,6 +209,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = dglunz;
 				TargetAttributes = {
+					07205EF01971FE500040FAE6 = {
+						DevelopmentTeam = ZUK4JWD5A6;
+					};
 					07205F111971FE500040FAE6 = {
 						TestTargetID = 07205EF01971FE500040FAE6;
 					};
@@ -251,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07205F0B1971FE500040FAE6 /* gifKeyViewController.m in Sources */,
+				0727A8411976055900E67F3A /* UIImage+animatedGIF.m in Sources */,
 				07205F011971FE500040FAE6 /* main.m in Sources */,
 				07205F051971FE500040FAE6 /* gifKeyAppDelegate.m in Sources */,
 			);
@@ -377,10 +390,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gifKey/gifKey-Prefix.pch";
 				INFOPLIST_FILE = "gifKey/gifKey-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +406,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gifKey/gifKey-Prefix.pch";
 				INFOPLIST_FILE = "gifKey/gifKey-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +476,7 @@
 				07205F251971FE500040FAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07205F261971FE500040FAE6 /* Build configuration list for PBXNativeTarget "gifKeyTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +485,7 @@
 				07205F281971FE500040FAE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
